@@ -1,7 +1,11 @@
 # qr-cartridge
 A basic build system including library importing from URLs for creating code that can be stored onto QR codes and ran directly off of them on the browser.
 
-Simply create a directory containing a `.config` file with your filepaths to your code behind the `code:` tag and external libraries imported from URLs behind the `external:`.
+There's an example [here](https://github.com/RandomGamingDev/qr-cartridge/tree/main/example)!
+
+Simply create a directory containing a `.config` file with your filepaths to your code behind the `code:` tag and external libraries imported from URLs behind the `external:`. (btw don't indent the URLs or anything else just paste them in after the line with the tag)
+Tags can be used multiple times and everything is imported in order.
+
 Then simply download the dependencies using `npm install` and then execute `comp.cjs` using NodeJS and follow the instructions.
 A `build` file will then be generated next to the config file containing everything you need.
 
