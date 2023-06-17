@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "qrcode": "^1.5.3",
+    "terser": "^5.18.0"
+  }
+}
