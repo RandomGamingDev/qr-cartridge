@@ -4,7 +4,7 @@ const process = require("process");
 const prompt = require("prompt-sync")();
 const qrcode = require("qrcode");
 
-const loc = prompt("Enter the location to your config files: ");
+const loc = prompt("Enter the location to your config file: ");
 const correctionLevel = prompt("Enter the error correction level you want (L, M, Q, H): ").toLowerCase();
 async function LoadCode() {
 	const Modes = {
