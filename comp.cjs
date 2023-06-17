@@ -26,7 +26,7 @@ async function LoadCode() {
 	const tail = "</script>"
 	let code = ""
 	for (const line of lines)
-		switch (line) {
+		switch (line.toLowerCase().trim()) {
 			case Modes.CodeHead:
 				mode = Modes.Code;
 				break;
