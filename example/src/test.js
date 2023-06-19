@@ -1,4 +1,3 @@
-//alert("Hello, World!");
 var c = document.createElement("canvas");
 c.width = 200;
 c.height = 200;

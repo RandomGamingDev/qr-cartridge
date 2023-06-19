@@ -48,7 +48,8 @@ async function LoadCode() {
 				}
 				break;
 		}
-	return header + (await terser.minify(code)).code + tail;
+	//return header + (await terser.minify(`{${code}}`)).code.slice(1, -1) + tail;
+	return header + (await terser.minify(code, {toplevel: true})).code + tail;
 }
 
 const buildDir = `${loc}/../build`;
