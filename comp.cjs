@@ -24,7 +24,7 @@ async function LoadCode() {
 		lines[i] = lines[i].replace('\r', '');
 	lines.pop();
 	let mode = Modes.Null;
-	const header = "data:text/html,<!DOCTYPE html><body/><script>"
+	const header = "data:text/html,<!DOCTYPE html><body></body><script>"
 	const tail = "</script>"
 	let code = ""
 	for (const line of lines)
