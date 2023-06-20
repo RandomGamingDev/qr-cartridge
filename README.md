@@ -6,7 +6,7 @@ There's an example [here](https://github.com/RandomGamingDev/qr-cartridge/tree/m
 Simply create a directory containing a `.config` file with your filepaths to your code behind the `code:` tag and external libraries imported from URLs behind the `external:`. (btw don't indent the URLs or anything else just paste them in after the line with the tag)
 Tags can be used multiple times and everything is imported in order.
 
-Then simply download the dependencies using `npm install` and then execute `comp.cjs` using NodeJS and follow the instructions.
+Then simply download the dependencies using `npm install` and then execute `comp.cjs` using NodeJS and follow the instructions or use the CLI argv inputs like this: `node comp.cjs <config file location> <QR code error correction level>`
 A `build` file will then be generated next to the config file containing everything you need.
 
 Because of the incredibly small size of javascript when properly minified alongside the wide browser support and the fact that the browsers do all the heavy lifting this is one of the perfect ways to create QR codes for tiny applications that anyone could use without requiring the internet!
