@@ -8,6 +8,7 @@ const args = process.argv.slice(2);
 
 const loc = args.length >= 1 ? args[0] : prompt("Enter the location to your config file: ");
 const correctionLevel = args.length >= 2 ? args[1] : prompt("Enter the error correction level you want (L, M, Q, H): ").toLowerCase();
+const loc_folder = loc.slice(0, loc.lastIndexOf('/'))
 async function LoadCode() {
 	const Modes = {
 		Null: 0,
@@ -42,7 +43,7 @@ async function LoadCode() {
 						process.exit();
 						break;
 					case Modes.Code:
-						code += fs.readFileSync(`${loc}/../${line}`, 'utf8');
+						code += fs.readFileSync(`${loc_folder}/${line}`, 'utf8');
 						break;
 					case Modes.Ext:
 						code += await (await fetch(line)).text();
@@ -50,11 +51,10 @@ async function LoadCode() {
 				}
 				break;
 		}
-	//return header + (await terser.minify(`{${code}}`)).code.slice(1, -1) + tail;
 	return header + (await terser.minify(code, {toplevel: true})).code + tail;
 }
 
-const buildDir = `${loc}/../build`;
+const buildDir = `${loc_folder}/build`;
 if (!fs.existsSync(buildDir)) {
 	fs.mkdirSync(buildDir);
 }
