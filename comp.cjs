@@ -7,7 +7,7 @@ const qrcode = require("qrcode");
 const args = process.argv.slice(2);
 
 const loc = args.length >= 1 ? args[0] : prompt("Enter the location to your config file: ");
-const correctionLevel = args.length >= 2 ? args[1] : prompt("Enter the error correction level you want (L, M, Q, H): ").toLowerCase();
+const correctionLevel = (args.length >= 2 ? args[1] : prompt("Enter the error correction level you want (L, M, Q, H): ")).toLowerCase();
 const loc_folder = loc.slice(0, loc.lastIndexOf('/'))
 async function LoadCode() {
 	const Modes = {
