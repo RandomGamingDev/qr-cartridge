@@ -1,7 +1,9 @@
 # qr-cartridge
 A basic build system including library importing from URLs for creating code that can be stored onto QR codes and ran directly off of them on the browser.
 
-There's an example [here](https://github.com/RandomGamingDev/qr-cartridge/tree/main/example)!
+There's an example [here](https://github.com/RandomGamingDev/qr-cartridge/tree/main/example)! <br/>
+Another project that uses it is [qr-flappy-bird](https://github.com/RandomGamingDev/qr-flappy-bird) which is a very close recreation of flappy bird with assets and everything :D <br/>
+Here's a video explaining how that project was made https://www.youtube.com/watch?v=CDMbnNxvrVM
 
 Simply create a directory containing a `.config` file with your filepaths to your code behind the `code:` tag and external libraries imported from URLs behind the `external:`. (btw don't indent the URLs or anything else just paste them in after the line with the tag)
 Tags can be used multiple times and everything is imported in order.
